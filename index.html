@@ -16,18 +16,53 @@
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 1rem;
+            padding: 2rem;
         }
         main {
             max-width: 800px;
             margin: 20px auto;
             padding: 0 20px;
+            padding-bottom: 100px;
         }
         section {
             background-color: white;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .service-card {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .contact-form {
+            display: grid;
+            gap: 15px;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .contact-form button {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #444;
         }
         footer {
             background-color: #333;
@@ -43,11 +78,40 @@
 <body>
     <header>
         <h1>Willkommen bei der Neuen Gesellschaft</h1>
+        <p>Ihre Partner für digitale Innovation</p>
     </header>
     <main>
         <section>
             <h2>Über uns</h2>
-            <p>Wir sind eine innovative Organisation, die sich für digitale Transformation einsetzt.</p>
+            <p>Wir sind eine innovative Organisation, die sich für digitale Transformation einsetzt. Mit jahrelanger Erfahrung und einem engagierten Team helfen wir Unternehmen, ihre digitale Zukunft zu gestalten.</p>
+        </section>
+
+        <section>
+            <h2>Unsere Dienstleistungen</h2>
+            <div class="services">
+                <div class="service-card">
+                    <h3>Digitale Transformation</h3>
+                    <p>Beratung und Implementierung für Ihre digitale Reise</p>
+                </div>
+                <div class="service-card">
+                    <h3>Prozessautomatisierung</h3>
+                    <p>Optimierung und Automation ihrer Geschäftsprozesse</p>
+                </div>
+                <div class="service-card">
+                    <h3>Innovation Lab</h3>
+                    <p>Entwicklung zukunftsweisender digitaler Lösungen</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Kontakt</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="E-Mail" required>
+                <textarea placeholder="Ihre Nachricht" rows="5" required></textarea>
+                <button type="submit">Nachricht senden</button>
+            </form>
         </section>
     </main>
     <footer>
